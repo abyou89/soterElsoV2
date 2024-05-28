@@ -13,16 +13,16 @@ public class GitProgtetelek {
         
     }
     
+    private static void progTetelek() {
+        osszegzes();
+        megszamlalas();
+    }
     private static void szamokTombKiir() {
-        System.out.print("A tömb elemei: ");
+        System.out.print("A tomb elemei: ");
         for (int i = 0; i < szamok.length; i++) {
             System.out.print(szamok[i] + " ");
         }
         System.out.println("");
-    }
-
-    private static void progTetelek() {
-        osszegzes();
     }
 
     private static void osszegzes() {
@@ -30,7 +30,17 @@ public class GitProgtetelek {
         for (int i = 0; i < szamok.length; i++) {
             osszeg += szamok[i];
         }
-        System.out.println("A számok osszege: " + osszeg);
+        System.out.println("A szamok osszege: " + osszeg);
+    }
+
+    private static void megszamlalas() {
+        int darab = 0;
+        for (int i = 0; i < szamok.length; i++) {
+            if(szamok[i] % 2 == 0){
+                darab++;
+            }
+        }
+        System.out.println("Paros elemek szama: " + darab);
     }
     
 }
