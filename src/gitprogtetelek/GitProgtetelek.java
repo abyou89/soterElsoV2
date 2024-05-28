@@ -9,15 +9,14 @@ public class GitProgtetelek {
     public static void main(String[] args) {
         szamokTombKiir();
         progTetelek();
-        maximumKivalasztas();
-        minimumKivalasztas();
-
-        
     }
     
     private static void progTetelek() {
         osszegzes();
         megszamlalas();
+        maximumKivalasztas();
+        minimumKivalasztas();
+        vanLegalabbEgy();
     }
     private static void szamokTombKiir() {
         System.out.print("A tomb elemei: ");
@@ -67,5 +66,19 @@ public class GitProgtetelek {
         System.out.println("A legkisebb elem helye: " + minIndex);
     
     }
+
+    private static void vanLegalabbEgy() {
+        int ker = 5;
+        int i = 0;
+        while(i < szamok.length && !(szamok[i] > ker)){
+            i++;
+        }
+        boolean valasz = i < szamok.length;  
+        if(valasz){
+            System.out.println("Van otnel nagyobb elem a sorozatban");
+        }else 
+            System.out.println("nincs otnel nagyobb elem a sorozatban");
+    }    
+
     
 }
