@@ -9,6 +9,8 @@ public class GitProgtetelek {
     public static void main(String[] args) {
         szamokTombKiir();
         progTetelek();
+        maximumKivalasztas();
+        minimumKivalasztas();
 
         
     }
@@ -41,6 +43,29 @@ public class GitProgtetelek {
             }
         }
         System.out.println("Paros elemek szama: " + darab);
+    }
+
+    private static void maximumKivalasztas() {
+        int maxIndex = 0;
+        for (int i = 0; i < szamok.length; i++) {
+            if(szamok[i] > szamok[maxIndex]){
+                maxIndex = i;
+            }
+        }
+        System.out.println("A sorozat legnagyobb eleme: " + szamok[maxIndex]);
+        System.out.println("A legnagyobb elem helye: " + maxIndex);
+    }
+
+    private static void minimumKivalasztas() {
+        int minIndex = 0;
+        for (int i = 0; i < szamok.length; i++) {
+            if(szamok[i] < szamok[minIndex]){
+                minIndex = i;
+            }
+        }
+        System.out.println("A sorozat legkisebb eleme: " + szamok[minIndex]);
+        System.out.println("A legkisebb elem helye: " + minIndex);
+    
     }
     
 }
