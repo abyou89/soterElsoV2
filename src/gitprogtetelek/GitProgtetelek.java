@@ -7,10 +7,18 @@ public class GitProgtetelek {
     public static int[] szamok = {1,4,9,5,6};
 
     public static void main(String[] args) {
-        
+        szamokTombKiir();
         progTetelek();
 
         
+    }
+    
+    private static void szamokTombKiir() {
+        System.out.print("A tömb elemei: ");
+        for (int i = 0; i < szamok.length; i++) {
+            System.out.print(szamok[i] + " ");
+        }
+        System.out.println("");
     }
 
     private static void progTetelek() {
