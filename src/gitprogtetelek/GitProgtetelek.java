@@ -12,13 +12,22 @@ public class GitProgtetelek {
     }
     
     private static void progTetelek() {
+        progtetelElsoNegy();
+        progtetelUtolsoNegy();
+    }
+
+    private static void progtetelUtolsoNegy() {
+        vanLegalabbEgy();
+        mind();
+        kivalasztas();
+        linearisKereses();
+    }
+
+    private static void progtetelElsoNegy() {
         osszegzes();
         megszamlalas();
         maximumKivalasztas();
         minimumKivalasztas();
-        vanLegalabbEgy();
-        mind();
-        kivalasztas();
     }
     private static void szamokTombKiir() {
         System.out.print("A tomb elemei: ");
@@ -109,5 +118,21 @@ public class GitProgtetelek {
     
     }
 
-    
+    private static void linearisKereses() {
+        int ker = 8;
+        int i = 0;
+        while(i < szamok.length && !(szamok[i] > ker)){
+            i++;
+        }
+        boolean van = i < szamok.length;  
+        /* kiválasztás: */
+        if(van){
+            System.out.printf("A keresett elem nagyobb mint %d\n",ker);
+            System.out.println("helye: " + i);
+            System.out.println("erteke: " + szamok[i]);
+        }else{
+            System.out.printf("nincs a keresesnek megfelelo elem (%d)\n",ker);
+            System.out.println("Nincs nagyobb mint " + ker);
+        }
+    }  
 }
