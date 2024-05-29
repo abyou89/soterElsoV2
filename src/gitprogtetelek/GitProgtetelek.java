@@ -17,6 +17,7 @@ public class GitProgtetelek {
         maximumKivalasztas();
         minimumKivalasztas();
         vanLegalabbEgy();
+        mind();
     }
     private static void szamokTombKiir() {
         System.out.print("A tomb elemei: ");
@@ -70,15 +71,28 @@ public class GitProgtetelek {
     private static void vanLegalabbEgy() {
         int ker = 5;
         int i = 0;
-        while(i < szamok.length && !(szamok[i] > ker)){
+        while(i < szamok.length && !(szamok[i] == ker)){
             i++;
         }
         boolean valasz = i < szamok.length;  
         if(valasz){
-            System.out.println("Van otnel nagyobb elem a sorozatban");
+            System.out.printf("Van legalabb egy %d a sorozatban\n",ker);
         }else 
-            System.out.println("nincs otnel nagyobb elem a sorozatban");
+            System.out.printf("nincs %d a sorozatban\n",ker);
     }    
+
+    private static void mind() {
+        int ker = 0;
+        int i = 0;
+        while(i < szamok.length && szamok[i] > ker){
+            i++;
+        }
+        boolean valasz = i >= szamok.length; 
+        if(valasz){
+            System.out.printf("Minden elem nagyobb mint %d\n",ker);
+        }else
+            System.out.printf("Nem minden elem nagyobb mint %d\n",ker);
+    }
 
     
 }
