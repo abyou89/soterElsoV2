@@ -16,19 +16,19 @@ public class GitProgtetelek {
         progtetelUtolsoNegy();
     }
 
-    private static void progtetelUtolsoNegy() {
-        vanLegalabbEgy();
-        mind();
-        kivalasztas();
-        linearisKereses();
-    }
-
     private static void progtetelElsoNegy() {
         osszegzes();
         megszamlalas();
         maximumKivalasztas();
         minimumKivalasztas();
     }
+    private static void progtetelUtolsoNegy() {
+        vanLegalabbEgy();
+        mind();
+        kivalasztas();
+        linearisKereses();
+    }
+    
     private static void szamokTombKiir() {
         System.out.print("A tomb elemei: ");
         for (int i = 0; i < szamok.length; i++) {
