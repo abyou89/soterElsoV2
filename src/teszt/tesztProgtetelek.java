@@ -57,7 +57,7 @@ public class tesztProgtetelek {
                 maxIndex = i;
             }
         }
-        assert maxIndex == 2 : "Hiba, a legnagyobb elem nem a 2. helyen szerepel";
+        assert maxIndex == 2 : "Hiba, a legnagyobb elem nem a 2. helyen van";
     }
 
     private static void minimumKivalasztasTeszt() {
@@ -67,23 +67,46 @@ public class tesztProgtetelek {
                 minIndex = i;
             }
         }
-        System.out.println("A sorozat legkisebb eleme: " + szamokTeszt[minIndex]);
-        System.out.println("A legkisebb elem helye: " + minIndex);
+        assert minIndex == 0 : "Hiba, a legkisebb elem nem a 0. helyen van";
     }
 
     private static void vanLegalabbEgyTeszt() {
-        
+        int ker = 5;
+        int i = 0;
+        while(i < szamokTeszt.length && !(szamokTeszt[i] > ker)){
+            i++;
+        }
+        boolean valasz = i < szamokTeszt.length;  
+        assert valasz == true : "Hiba, nincs 5-nel nagyobb elem a srozatban";
     }
 
     private static void mindTeszt() {
-       
+       int ker = 0;
+       int i = 0;
+       while(i < szamokTeszt.length && szamokTeszt[i] > ker){
+           i++;
+       }
+       boolean valasz = i >= szamokTeszt.length; 
+       assert valasz == true : "Hiba, nem minden elem nagyobb mint 0";
     }
 
     private static void kivalasztasTeszt() {
-        
+        int ker = 5;
+        int i = 0;
+        while(i < szamokTeszt.length && !(szamokTeszt[i] == ker)){
+            i++;
+        }
+        boolean valasz = i < szamokTeszt.length; 
+        assert valasz == true : "Hiba, A sorozatban nem szerepel 5";
     }
 
     private static void linearisKeresesTeszt() {
-       
+       int ker = 8;
+        int i = 0;
+        while(i < szamokTeszt.length && !(szamokTeszt[i] > ker)){
+            i++;
+        }
+        boolean van = i < szamokTeszt.length;  
+        assert van == true : "Hiba, nincs a sorozatban a keresett elemnél nagyobb";
     }
 }
