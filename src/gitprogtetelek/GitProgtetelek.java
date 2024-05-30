@@ -37,7 +37,7 @@ public class GitProgtetelek {
         System.out.println("");
     }
 
-    private static void osszegzes() {
+    public static void osszegzes() {
         int osszeg = 0;
         for (int i = 0; i < szamok.length; i++) {
             osszeg += szamok[i];

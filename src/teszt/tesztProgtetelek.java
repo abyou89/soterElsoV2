@@ -5,9 +5,10 @@ import gitprogtetelek.GitProgtetelek;
 
 public class tesztProgtetelek {
     
+    static int[] szamokTeszt = GitProgtetelek.szamok;
+            
     public static void main(String[] args) {
         progtetelekTeszt();
-        
     }
 
     private static void progtetelekTeszt() {
@@ -32,34 +33,38 @@ public class tesztProgtetelek {
     }
 
     private static void osszegzesTeszt() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        int osszeg = 0;
+        for (int i = 0; i < szamokTeszt.length; i++) {
+            osszeg += szamokTeszt[i];
+        }
+        assert osszeg == 25 : "Hiba, a tomb elemeinek osszege nem 25";
     }
 
     private static void megszamlalasTeszt() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        
     }
 
     private static void maximumKivalasztasTeszt() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+       
     }
 
     private static void minimumKivalasztasTeszt() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        
     }
 
     private static void vanLegalabbEgyTeszt() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        
     }
 
     private static void mindTeszt() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+       
     }
 
     private static void kivalasztasTeszt() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        
     }
 
     private static void linearisKeresesTeszt() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+       
     }
 }
